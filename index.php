@@ -1,37 +1,42 @@
 <?php 
 
-$result = '2';
+$a = 2;
+$b = 4;
+$c = 7;
 
-echo "<p>";
+$result_soma = $a + $b;
+echo "Soma: $result_soma<br /><br />";
 
-echo "Resultado de exemplo 1: " . $result;
+$result_subtracao = $c - $b;
 
-$result_dois = $result + 1;
+echo "Subtracao: $result_subtracao<br /><br />";
 
-echo "<br />";
+$result_multiplicacao = $c * $a;
 
-echo "Resultado Exemplo 2: " . $result_dois;
+echo "Multiplicacao: $result_multiplicacao<br /><br />";
 
-$result_tres = $result_dois + 3.5;
+$result_divisao = $b / $a;
 
-echo "<br />";
+echo "Divisão: " . $result_divisao . "<br /><br />";
 
-echo "Resultado Exemplo 3: " . $result_tres;
+$result_resto = $c % $a;
 
-$result_quadro = 11;
+echo "Resto: $result_resto<br /><br />";
 
-$result_cinco = (double) $result_quadro;
+try {
+    $result_divisao = $b / 3;
 
-echo "<br />";
+    echo "Divisão por Zero: " . $result_divisao . "<br /><br />";
+} catch(DivisionByZeroError $e) {
+    echo "Divisão por Zero: Erro " . $e->getMessage() . "<br /><br />";
+}
 
-echo "Resultado Exemplo 5: $result_cinco";
+$cc = 38564.32;
+echo "Valor na conta corrente: R$ " . number_format($cc, 2, ',', '.') . "<br /><br />";
 
-$result_seis = 7.9;
+$debito = 200.16;
+echo "Valor do débito: R$ " . number_format($debito, 2, ',', '.') . "<br /><br />";
 
-$result_sete = (int) $result_seis;
+$result_real = $cc - $debito;
 
-echo "<br />";
-
-echo "Resultado Exemplo 7: " . $result_sete;
-
-echo "</p>";
+echo "Saldo: R$ " . number_format($result_real, 2, ',', '.') . "<br><br>";
