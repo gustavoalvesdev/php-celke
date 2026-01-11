@@ -1,5 +1,0 @@
-- Visual Studio Code
-- XAMPP
-- Windows
-- Composer
-- Google Chrome
